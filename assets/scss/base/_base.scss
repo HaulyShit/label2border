@@ -1,0 +1,25 @@
+html {
+    box-sizing : border-box
+}
+
+
+
+body {
+    font-family : "Source Sans Pro",sans-serif;
+    font-size   : 20px;
+    font-weight : 300;
+    padding     : 20px 20%;
+}
+
+
+
+* {
+    box-sizing  : inherit;
+    font-weight : inherit;
+}
+
+
+
+.dp--ib {
+    display : inline-block;
+}

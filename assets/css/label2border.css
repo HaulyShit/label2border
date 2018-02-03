@@ -1,0 +1,80 @@
+html {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Source Sans Pro",sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 20px 20%; }
+
+* {
+  box-sizing: inherit;
+  font-weight: inherit; }
+
+.dp--ib {
+  display: inline-block; }
+
+input, textarea {
+  padding: 20px;
+  outline: none;
+  border: 2px solid;
+  transition: ease .25s border; }
+
+/*!*******************************************************************************
+ * css plugin : label2border
+ * author     : Janis Hau
+ * author-url : haulyshit.de
+ * version    : 1.0
+ * date       : 02/03/2018
+ *
+ *
+ *
+ * TABLE OF CONTENT 
+ * 
+ * #.label2border .................................... here contains input fiels
+ *   #label .................................................. generell stylings
+ *   #input .................................................. generell stylings
+ *   #textarea, input ........... what happens on focus if value empty or !empty
+ *   #textarea .............. specific for textarea, coz there bigger than input
+ *
+ ******************************************************************************!*/
+.label2border {
+  position: relative;
+  margin-bottom: 20px; }
+  .label2border label {
+    position: absolute;
+    pointer-events: none;
+    transition: ease .25s all; }
+  .label2border input,
+  .label2border textarea {
+    border-color: #000; }
+    .label2border input[value=""],
+    .label2border textarea[value=""] {
+      border-color: #000; }
+    .label2border input:focus,
+    .label2border textarea:focus {
+      border-color: #0F0; }
+  .label2border textarea[value=""]:focus + label, .label2border textarea:focus + label,
+  .label2border textarea + label,
+  .label2border input[value=""]:focus + label,
+  .label2border input:focus + label,
+  .label2border input + label {
+    top: 0;
+    font-size: .65em;
+    margin: -.75em 1.5em;
+    background: #FFF;
+    color: #000;
+    padding: .125em .5em;
+    left: 0; }
+  .label2border textarea[value=""] + label,
+  .label2border input[value=""] + label {
+    top: 50%;
+    font-size: 1em;
+    margin: -.6em 20px;
+    padding: 0;
+    background: transparent; }
+  .label2border textarea[value=""] + label {
+    top: 13px;
+    margin: 0 20px; }
+
+/*# sourceMappingURL=label2border.css.map */

@@ -1,0 +1,8 @@
+input, textarea {
+    padding    : 20px;
+    outline    : none;
+    border     : 2px solid;
+    transition : ease .25s border;
+}
+
+@import 'input/label2border';

@@ -1,0 +1,87 @@
+/*!*******************************************************************************
+ * css plugin : label2border
+ * author     : Janis Hau
+ * author-url : haulyshit.de
+ * version    : 1.0
+ * date       : 02/03/2018
+ *
+ *
+ *
+ * TABLE OF CONTENT 
+ * 
+ * #.label2border .................................... here contains input fiels
+ *   #label .................................................. generell stylings
+ *   #input .................................................. generell stylings
+ *   #textarea, input ........... what happens on focus if value empty or !empty
+ *   #textarea .............. specific for textarea, coz there bigger than input
+ *
+ ******************************************************************************!*/
+
+.label2border {
+    position      : relative;
+    margin-bottom : 20px;
+    
+    
+    
+    label {
+        position       : absolute;
+        pointer-events : none;
+        transition     : ease .25s all;
+    }
+    
+    
+    
+    input,
+    textarea {
+        border-color : $color-00;
+        
+        
+        &[value=""] {
+            border-color : $color-00;
+        }
+        
+        
+        &:focus {
+            border-color : $color-02;
+        }
+    }
+    
+    
+    
+    textarea,
+    input {
+        &[value=""]:focus + label,
+        &:focus + label,
+        + label {
+            top        : 0;
+            font-size  : .65em;
+            margin     : -.75em 1.5em;
+            background : $color-01;
+            color      : $color-00;
+            padding    : .125em .5em;
+            left       : 0;
+        }
+        
+        
+        &[value=""] {            
+            + label {
+                top        : 50%;
+                font-size  : 1em;
+                margin     : -.6em 20px;
+                padding    : 0;
+                background : transparent;
+            }
+        } 
+    }
+    
+    
+    
+    textarea {
+        &[value=""] {            
+            + label {
+                top    : 13px;
+                margin : 0 20px;
+            }
+        }
+    }
+}
