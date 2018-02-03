@@ -9,10 +9,4 @@ Implement the css-file.
 Implement the js-file.
 The Input have to be implemented first, after this the label.
 
-<div class="label2border"> 
-    <textarea name="message" value="" id="message"></textarea> 
-    <label for="message">EMail</label> 
-</div> <!-- /.label2border -->
-The comment isn't necessary.
-
 © Copyright by HaulyShit
